@@ -53,6 +53,10 @@
   font-size: 14px;
 }
 
+.container .leftSide input:disabled {
+  opacity: .5;
+}
+
 .container .leftSide button {
   background-color: #227c9d;
   color: #FFF;
@@ -69,6 +73,11 @@
 
 .container .leftSide button:hover {
   opacity: .9;
+}
+
+.container .leftSide button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 .container .rightSide {

@@ -45,6 +45,7 @@ const App = () => {
             placeholder="Digite a sua altura. Ex: 1.5 (em metros)"
             value={campoAltura > 0 ? campoAltura : ''}
             onChange={(e) => setCampoAltura(parseFloat(e.target.value))}
+            disabled={mostrarItem ? true : false}
           />
 
           <input
@@ -52,9 +53,12 @@ const App = () => {
             placeholder="Digite o seu peso. Ex: 60.5 (em kg)"
             value={campoPeso > 0 ? campoPeso : ''}
             onChange={(e) => setCampoPeso(parseFloat(e.target.value))}
+            disabled={mostrarItem ? true : false}
           />
 
-          <button onClick={calcularIMC}>Calcular</button>
+          <button disabled={mostrarItem ? true : false} onClick={calcularIMC}>
+            Calcular
+          </button>
         </div>
 
         <div className={styles.rightSide}>
