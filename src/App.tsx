@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
+import { levels, calulateImc} from "./Helpers/imc"
+
 
 const App = () => {
 
@@ -8,7 +10,7 @@ const App = () => {
 
   function calcularIMC(){
     if(campoPeso && campoAltura){
-      
+ 
     }else {
       alert("Digite todoso os campos")
     }
