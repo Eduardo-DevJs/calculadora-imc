@@ -38,8 +38,10 @@ export function calulateImc(altura: number, peso: number){
 
   for(let i in levels){
     if(imc >= levels[i].imc[0] && imc <= levels[i].imc[1]){
+      let levelCopy: LevelsProps = {...levels[i]}
+
       levels[i].youImc = parseFloat(imc.toFixed(2))
-      return levels[i]
+      return levelCopy
     }
   }
   

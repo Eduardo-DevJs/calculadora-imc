@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './App.module.css';
 import { levels, calulateImc, LevelsProps } from './Helpers/imc';
 import GridItem from './components/GridItem/GridItem';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 const App = () => {
   const [campoAltura, setCampoAltura] = useState<number>(0);
@@ -14,6 +15,10 @@ const App = () => {
     } else {
       alert('Digite todoso os campos');
     }
+  }
+
+  function handleBackButton() {
+    window.location.href = '/';
   }
 
   return (
@@ -63,7 +68,9 @@ const App = () => {
 
           {mostrarItem && (
             <div className={styles.rightBig}>
-              <div className={styles.rightArrow}></div>
+              <div className={styles.rightArrow} onClick={handleBackButton}>
+                <FaLongArrowAltLeft size={25} color="#fff" />
+              </div>
               <GridItem item={mostrarItem} />
             </div>
           )}
