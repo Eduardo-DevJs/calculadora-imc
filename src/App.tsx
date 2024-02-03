@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import { levels, calulateImc} from "./Helpers/imc"
+import GridItem from './components/GridItem/GridItem';
 
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
 
   function calcularIMC(){
     if(campoPeso && campoAltura){
- 
+      
     }else {
       alert("Digite todoso os campos")
     }
@@ -47,8 +48,14 @@ const App = () => {
 
           <button onClick={calcularIMC}>Calcular</button>
         </div>
-        <div className={styles.rightSide}>
 
+
+        <div className={styles.rightSide}>
+          <div className={styles.grid}>
+            {levels.map((item, index) => (
+              <GridItem key={index} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
