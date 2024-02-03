@@ -22,7 +22,7 @@ const App = () => {
   }
 
   return (
-    <div className="">
+    <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
           <div className={styles.headerLogo}>
